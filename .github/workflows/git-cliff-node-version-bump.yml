@@ -60,7 +60,7 @@ jobs:
 
 
       - name: Install git cliff
-        uses: vman101/workflow-test/git-cliff-install@main
+        uses: vman101/workflow-test/git-cliff-setup@main
 
 
       - name: Declare release type

@@ -34,7 +34,7 @@ jobs:
           github-host: ${{ inputs.github-host }}
 
       # Install git cliff
-      - uses: vman101/workflow-test/git-cliff-install@main
+      - uses: vman101/workflow-test/git-cliff-setup@main
         with:
           git-cliff-version: ${{ inputs.git-cliff-version }}
 
