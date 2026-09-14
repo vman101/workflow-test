@@ -33,7 +33,6 @@ on:
       private-key:
         description: Github App private key
         required: true
-        type: string
 
     outputs:
       new-tag:
