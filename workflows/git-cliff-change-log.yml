@@ -20,20 +20,19 @@ on:
       private-key:
         description: Github App private key
         required: true
-        type: string
 
 jobs:
   changelog:
     runs-on: ubuntu-latest
     permissions:
-      content: write
+      contents: write
     steps:
       # Configure and checkout git repo
       - uses: vman101/workflow-test/actions/configure-git@main
         id: app-token
         with:
           client-id: ${{ inputs.client-id }}
-          private-key: ${{ inputs.private-key }}
+          private-key: ${{ secrets.private-key }}
           github-host: ${{ inputs.github-host }}
 
       # Install git cliff
