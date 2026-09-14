@@ -35,7 +35,6 @@ runs:
         fetch-depth: 0 # For git cliff to be able to generate the full changelog
         fetch-tags: true
         token: ${{ steps.app-token.outputs.token }}
-        ref: main
         persist-credentials: true
 
     # Get GitHub App User ID
