@@ -54,7 +54,7 @@ jobs:
 
     steps:
       - name: Setup Repo
-        uses: vman101/workflow-test/actions/configure-git@main
+        uses: vman101/workflow-test/configure-git@main
         id: app-token
         with:
           client-id: ${{ inputs.client-id }}
@@ -63,7 +63,7 @@ jobs:
 
 
       - name: Install git cliff
-        uses: vman101/workflow-test/actions/git-cliff-install@main
+        uses: vman101/workflow-test/git-cliff-install@main
 
 
       - name: Declare release type

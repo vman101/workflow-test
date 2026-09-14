@@ -28,7 +28,7 @@ jobs:
       contents: write
     steps:
       # Configure and checkout git repo
-      - uses: vman101/workflow-test/actions/configure-git@main
+      - uses: vman101/workflow-test/configure-git@main
         id: app-token
         with:
           client-id: ${{ inputs.client-id }}
@@ -36,7 +36,7 @@ jobs:
           github-host: ${{ inputs.github-host }}
 
       # Install git cliff
-      - uses: vman101/workflow-test/actions/git-cliff-install@main
+      - uses: vman101/workflow-test/git-cliff-install@main
         with:
           git-cliff-version: ${{ inputs.git-cliff-version }}
 
