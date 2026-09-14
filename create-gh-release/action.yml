@@ -10,7 +10,7 @@ description: Generate Release notes
   run: |
    set -e
     # No assets for this release - only docker image on registry
-    gh release create "$TAG_NAME" --target $(git rev-parse HEAD) --notes "Generating..." --title "$TAG_NAME"
+    # gh release create "$TAG_NAME" --target $(git rev-parse HEAD) --notes "Generating..." --title "$TAG_NAME"
     echo "Fetching just created tag"
     for i in {1..5}; do
       git fetch origin refs/tags/"$TAG_NAME":refs/tags/"$TAG_NAME" && break
@@ -26,4 +26,4 @@ description: Generate Release notes
     TAG_NAME: ${{ needs.bump-version.outputs.new-tag }}
   run: |
     git-cliff -c cliff.toml --current --output ${{ runner.temp }}/RELEASE_NOTES.md
-    gh release edit "$TAG_NAME" --notes-file "${{ runner.temp }}/RELEASE_NOTES.md" --latest
+    # gh release edit "$TAG_NAME" --notes-file "${{ runner.temp }}/RELEASE_NOTES.md" --latest
