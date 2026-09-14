@@ -39,4 +39,4 @@ runs:
           echo "${REGISTRY#*:}/:_authToken=${AUTH_TOKEN}" > "$NPMRC"
         fi
 
-        npm publish "$NPM_TARGET_DIR" --registry "$REGISTRY"
+        # npm publish "$NPM_TARGET_DIR" --registry "$REGISTRY"
