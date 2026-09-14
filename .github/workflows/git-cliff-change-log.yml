@@ -24,8 +24,6 @@ on:
 jobs:
   changelog:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       # Configure and checkout git repo
       - uses: vman101/workflow-test/configure-git@main
