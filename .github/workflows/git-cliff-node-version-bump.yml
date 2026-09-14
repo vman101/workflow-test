@@ -45,8 +45,6 @@ on:
 jobs:
   bump-version:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     outputs:
       version: ${{ steps.version.outputs.new-tag }}
       app-name: ${{ steps.app-name.outputs.app-name }}
